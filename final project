@@ -63,6 +63,21 @@ this.size=size;
 this.shapeType=shapeType;
 this.color=color;
 }
+display {
+fill (this.color); noStroke);
+if (this.shapeType === "circle") {
+ellipse(this.x, this.y, this.size);
+} else if (this.shapeType ===
+"square") {
+rect(this.x - this.size / 2, this.y - this.size / 2, this.size, this.size);
+} else if (this.shapeType ===
+"triangle") {
+triangle(
+this., this.y - this.size / 2, this.x - this.size / 2, this.y +
+this.size / 2,
+this.x + this.size / 2, this.y +
+this.size / 2
+);
     }
   }
 }
